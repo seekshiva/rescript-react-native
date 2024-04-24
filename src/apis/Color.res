@@ -3,11 +3,16 @@ type t = string
 @module("react-native")
 external processColor: string => string = "processColor"
 
-let rgb = (~r: int, ~g: int, ~b: int) => j`rgb($r, $g, $b)`
-let rgba = (~r: int, ~g: int, ~b: int, ~a: float) => j`rgba($r, $g, $b, $a)`
+let str = string_of_int
+let fStr = Js.Float.toString
 
-let hsl = (~h: float, ~s: float, ~l: float) => j`hsl($h, $s%, $l%)`
-let hsla = (~h: float, ~s: float, ~l: float, ~a: float) => j`hsl($h, $s%, $l%, $a)`
+let rgb = (~r: int, ~g: int, ~b: int) => `rgb(${r->str}, ${g->str}, ${b->str})`
+let rgba = (~r: int, ~g: int, ~b: int, ~a: float) =>
+  `rgba(${r->str}, ${g->str}, ${b->str}, ${a->fStr})`
+
+let hsl = (~h: float, ~s: float, ~l: float) => `hsl(${h->fStr}, ${s->fStr}%, ${l->fStr}%)`
+let hsla = (~h: float, ~s: float, ~l: float, ~a: float) =>
+  `hsl(${h->fStr}, ${s->fStr}%, ${l->fStr}%, ${a->fStr})`
 
 @inline
 let transparent = "transparent"
