@@ -1,5 +1,5 @@
 {
-  "name": "rescript-react-native",
+  "name": "rescript-react-native-for-rescript-11",
   "description": "ReScript bindings for React Native.",
   "version": "0.70.0",
   "peerDependencies": {
@@ -10,8 +10,8 @@
   "overrides": {
     "react": "18.0.0"
   },
-  "repository": "https://github.com/rescript-react-native/rescript-react-native.git",
-  "funding": "https://github.com/rescript-react-native/rescript-react-native?sponsor=1",
+  "repository": "https://github.com/seekshiva/rescript-react-native.git",
+  "funding": "https://github.com/seekshiva/rescript-react-native?sponsor=1",
   "license": "MIT",
   "keywords": [
     "rescript",
@@ -57,5 +57,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
